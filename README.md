@@ -43,3 +43,18 @@ app.get('/', function (req, res) {
 var server = app.listen(5000, function () {
     console.log('Server is running..');
 });
+
+
+# https://learn.microsoft.com/en-us/sql/connect/node-js/node-js-driver-for-sql-server?view=sql-server-ver16
+# https://learn.microsoft.com/en-us/sql/connect/node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js?view=sql-server-ver16
+
+# https://github.com/tediousjs/tedious/tree/master/examples
+# https://www.youtube.com/watch?v=W3VZt8OkDX0
+
+
+# Connecting to Salesforce
+
+# https://github.com/msrivastav13/node-sf-bulk2
+# https://salesforce.stackexchange.com/questions/329155/create-a-bulk-job-using-jsforce
+# https://github.com/msrivastav13/sfmetadataDependency
+# https://npm.io/package/node-sf-bulk2
