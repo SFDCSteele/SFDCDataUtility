@@ -1,6 +1,8 @@
 # SFDCDataUtility
 Utility to read from multiple sources and load data to a SF Org using Bulk API 2.0
 
+# source: https://github.com/endolabs/salesforce-bulkv2-java
+
 
 # https://www.tutorialsteacher.com/nodejs/access-sql-server-in-nodejs
 
