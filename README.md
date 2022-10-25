@@ -1,11 +1,14 @@
 # SFDCDataUtility
 Utility to read from multiple sources and load data to a SF Org using Bulk API 2.0
 
-# source: https://github.com/endolabs/salesforce-bulkv2-java
-# Build
+# BulkAPI Section
+- source: https://github.com/endolabs/salesforce-bulkv2-java
+
+## Build
 $ ./gradlew build
 
-# https://www.tutorialsteacher.com/nodejs/access-sql-server-in-nodejs
+# Node Section
+- https://www.tutorialsteacher.com/nodejs/access-sql-server-in-nodejs
 
 
 var express = require('express');
@@ -48,21 +51,23 @@ var server = app.listen(5000, function () {
 });
 
 
-# https://learn.microsoft.com/en-us/sql/connect/node-js/node-js-driver-for-sql-server?view=sql-server-ver16
-# https://learn.microsoft.com/en-us/sql/connect/node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js?view=sql-server-ver16
+- https://learn.microsoft.com/en-us/sql/connect/node-js/node-js-driver-for-sql-server?view=sql-server-ver16
+- https://learn.microsoft.com/en-us/sql/connect/node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js?view=sql-server-ver16
 
-# https://github.com/tediousjs/tedious/tree/master/examples
-# https://www.youtube.com/watch?v=W3VZt8OkDX0
+- https://github.com/tediousjs/tedious/tree/master/examples
+- https://www.youtube.com/watch?v=W3VZt8OkDX0
 
 
-# Connecting to Salesforce
+# Connecting to Salesforce with Node
 
-# https://github.com/msrivastav13/node-sf-bulk2
-# https://salesforce.stackexchange.com/questions/329155/create-a-bulk-job-using-jsforce
-# https://github.com/msrivastav13/sfmetadataDependency
-# https://npm.io/package/node-sf-bulk2
+- https://github.com/msrivastav13/node-sf-bulk2
+- https://salesforce.stackexchange.com/questions/329155/create-a-bulk-job-using-jsforce
+- https://github.com/msrivastav13/sfmetadataDependency
+- https://npm.io/package/node-sf-bulk2
 
-## Java section 
+# Java section
+
+## Connecting to MSSQL database
 - https://www.codejava.net/java-se/jdbc/connect-to-microsoft-sql-server-via-jdbc
 - https://learn.microsoft.com/en-us/sql/connect/jdbc/step-3-proof-of-concept-connecting-to-sql-using-java?view=sql-server-ver16
 - https://hevodata.com/learn/java-connect-to-microsoft-sql-server/
