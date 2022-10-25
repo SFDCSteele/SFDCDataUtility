@@ -61,3 +61,8 @@ var server = app.listen(5000, function () {
 # https://salesforce.stackexchange.com/questions/329155/create-a-bulk-job-using-jsforce
 # https://github.com/msrivastav13/sfmetadataDependency
 # https://npm.io/package/node-sf-bulk2
+
+## Java section 
+- https://www.codejava.net/java-se/jdbc/connect-to-microsoft-sql-server-via-jdbc
+- https://learn.microsoft.com/en-us/sql/connect/jdbc/step-3-proof-of-concept-connecting-to-sql-using-java?view=sql-server-ver16
+- https://hevodata.com/learn/java-connect-to-microsoft-sql-server/
