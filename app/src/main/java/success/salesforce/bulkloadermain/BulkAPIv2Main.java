@@ -25,6 +25,8 @@ public class BulkAPIv2Main {
     Map<String, String> env = new HashMap<>();
     MockData mock = new MockData();
     LoadCSVData csvData = new LoadCSVData();
+    DatabaseConnection db = new DatabaseConnection();
+    Configuration config = new Configuration();
 
     public BulkAPIv2Main () {
     }
@@ -37,19 +39,21 @@ public class BulkAPIv2Main {
             "========================================"+
             "========================================"+
             "========================================"+
-            "========================================"
+            "========================================x"
         );
         for (String envName : env.keySet()) {
             System.out.format("\t\t%s\t\t=\t\t%s%n",
                               envName,
                               env.get(envName));
         }
+        config.loadConfig();
+        db.connect();
         //if (args[0] == "MOCK" ) {
         //mock.buildMock(Integer.parseInt(env.get("mockRecords")));
         //} else {
             //String csv = mock.buildMock(Integer.parseInt(env.get("mockRecords")));
 
-            execute (env);
+            //execute (env);
         //}
 
     }

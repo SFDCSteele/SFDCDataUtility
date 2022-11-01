@@ -1,0 +1,8 @@
+{
+    "dbURL": "jdbc:postgresql://localhost:5432/SteeleSnowball",
+    "dataSources": "osc",
+    "sourceTables": [
+        "RESOURCE","ACCOUNT"
+    ]
+
+}
