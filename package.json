@@ -1,0 +1,19 @@
+{
+  "name": "sfdcdatautility",
+  "version": "1.0.0",
+  "description": "Salesforce Data Load Utility",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SFDCSteele/SFDCDataUtility.git"
+  },
+  "author": "William Steele",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SFDCSteele/SFDCDataUtility/issues"
+  },
+  "homepage": "https://github.com/SFDCSteele/SFDCDataUtility#readme"
+}
