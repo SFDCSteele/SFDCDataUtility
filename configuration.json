@@ -1,0 +1,30 @@
+{
+    "dbURL": "jdbc:postgresql://localhost:5432/SteeleSnowball",
+    "dataSources": "osc",
+    "sourceTables": [
+        "RESOURCE","ACCOUNT"
+    ],
+    "mock": true,
+    "mockRecords": 10,
+    "dataLoads": [
+        {
+            "dataloadName": "USER",
+            "sourceSchema": "osc",
+            "sourceTable": "RESOURCE",
+            "SalesforceObject": "User",
+            "operation": "insert",
+            "extractSQL": "columnHeaders",
+            "extractWhereClause": "where"
+        },
+        {
+            "dataloadName": "ACCOUNT",
+            "sourceSchema": "osc",
+            "sourceTable": "ACCOUNT",
+            "SalesforceObject": "Account",
+            "operation": "insert",
+            "extractSQL": "columnHeaders",
+            "extractWhereClause": "where"
+        }
+    ]
+
+}

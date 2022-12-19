@@ -62,6 +62,12 @@ public class BulkAPIv2Main {
         return "BulkAPIv2Main says Hello World!";
     }
 
+    private ArrayList<Object> getBatch() {
+        ArrayList<Object> batch = new ArrayList<Object>();
+
+        return batch;
+    }
+
     public static void main(String[] args) {
         System.out.println(new BulkAPIv2Main().getGreeting());
         new BulkAPIv2Main(args);

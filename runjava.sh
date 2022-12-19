@@ -28,5 +28,10 @@ fi
 #java -cp ./lib/\*:. utility.DataUtil  extractLogs  Last_Week
 #java -cp './dest:./lib/logging-interceptor-3.2.0.jar:./lib/okio-1.9.0.jar:./lib/okhttp-3.9.1.jar:./lib/jackson-core-2.12.3.jar:./lib/org.slf4j.jar:./lib/jackson-databind-2.13.0.jar:./lib/jackson-annotations-2.13.0.jar:./dest/endolabs/salesforce/bulkv2/request/CloseOrAbortJobRequest:./src/main/java'  BulkLoaderMain.BulkAPIv2Main
 #java -cp './dest:./app/dest/success/bulkloadermain:./app/lib/slf4j-simple-1.6.2.jar:./app/lib/slf4j-api-1.7.32.jar:./app/lib/logging-interceptor-3.2.0.jar:./app/lib/okio-1.3.0.jar:./app/lib/okhttp-3.9.1.jar:./app/lib/jackson-core-2.12.3.jar:./app/lib/org.slf4j.jar:./app/lib/jackson-databind-2.13.0.jar:./app/lib/jackson-annotations-2.13.0.jar'  success.salesforce.bulkloadermain.BulkAPIv2Main
-java -cp './dest:./app/dest/success/bulkloadermain:./app/lib/*.jar:./app/lib/postgresql-42.5.0.jar:./app/lib/json-simple-1.1.1.jar'  success.salesforce.bulkloadermain.BulkAPIv2Main
+#java -cp './dest:./app/dest/success/bulkloadermain:./app/lib/*.jar:./app/lib/postgresql-42.5.0.jar:./app/lib/json-simple-1.1.1.jar'  success.salesforce.bulkloadermain.BulkAPIv2Main
+#java -cp ./app/dest/SFDCDataUtility.jar  dest.success.salesforce.bulkloadermain.BulkAPIv2Main
+cd ./dest
+ls -al
+#java -jar ./dest/SFDCDataUtility.jar -cp ./dest/lib/*.jar
+java -cp ./lib/*.jar:./lib/json-simple-1.1.1.jar -jar SFDCDataUtility.jar 
 #

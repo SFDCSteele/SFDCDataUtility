@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/SFDCSteele/SFDCDataUtility/issues"
   },
-  "homepage": "https://github.com/SFDCSteele/SFDCDataUtility#readme"
+  "homepage": "https://github.com/SFDCSteele/SFDCDataUtility#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "fs": "^0.0.1-security",
+    "jsforce": "^1.11.0",
+    "mssql": "^9.0.1",
+    "node-sf-bulk2": "^0.0.23"
+  }
 }
