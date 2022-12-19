@@ -6,6 +6,8 @@
     ],
     "mock": true,
     "mockRecords": 10,
+    "maxRecords": 1000,
+    "extractOnly": true,
     "dataLoads": [
         {
             "dataloadName": "USER",
@@ -13,8 +15,11 @@
             "sourceTable": "RESOURCE",
             "SalesforceObject": "User",
             "operation": "insert",
-            "extractSQL": "columnHeaders",
-            "extractWhereClause": "where"
+            "extractSQL": ["columnHeaders"],
+            "pagination": "OFFSET # ROWS FETCH NEXT & ROWS ONLY",
+            "bulkLoaderColumnHeaders": [""],
+            "extractWhereClause": "where",
+            "extractOrderByClause": "ORDER BY"
         },
         {
             "dataloadName": "ACCOUNT",
@@ -22,8 +27,11 @@
             "sourceTable": "ACCOUNT",
             "SalesforceObject": "Account",
             "operation": "insert",
-            "extractSQL": "columnHeaders",
-            "extractWhereClause": "where"
+            "extractSQL": ["PartyId","Organization","ParentAccountPartyId","RawPhoneNumber"],
+            "pagination": "OFFSET # ROWS FETCH NEXT & ROWS ONLY",
+            "bulkLoaderColumnHeaders": ["PACE_ACCOUNT_PartyId__c","Name","ParentId","Phone"],
+            "extractWhereClause": "ORDER by ParentAccountPartyId",
+            "extractOrderByClause": "ORDER BY"
         }
     ]
 

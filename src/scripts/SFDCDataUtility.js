@@ -74,7 +74,7 @@ async function queryCollection(sql, pipeline) {
   request.query(pipeline, function (err, recordset) {
 
     if (err) console.log(err)
-    console.log('\n\n query database: ' + JSON.stringify(recordset))
+    console.log('\n\n query database results: ' + JSON.stringify(recordset))
 
     // send records as a response
     return recordset
@@ -155,10 +155,11 @@ const getMock = async (totalRecords) => {
 
 }
 
-const getBatch = async (db, query, skip, limit) => {
-  const pipeline = [...query, { $skip: skip ?? 1 }, { $limit: limit ?? 20 }]
-  console.log(JSON.stringify(pipeline))
-  return queryCollection(db, pipeline)
+const getBatch = async (db, query) => {
+  //const pipeline = [...query, { $skip: skip ?? 1 }, { $limit: limit ?? 20 }]
+  //console.log(JSON.stringify(pipeline))
+  console.log('executing query: '+query)
+  return queryCollection(db, query)
 }
 
 const updateBatch = async (bulkrequest, response, data) => {
@@ -172,6 +173,18 @@ const loadConfiguration = async () => {
   return processConfig
 }
 
+const convertToFields = async (sqlFields) => {
+  let returnSQL = ''
+  let cnt = sqlFields
+  for ( let i=0;i<sqlFields.length;i++) {
+    returnSQL += field
+    if ( i < sqlFields.length) {
+      returnSQL+=','
+    }
+  }
+  return returnSQL
+}
+
 const run = async () => {
   try {
     processConfig = await loadConfiguration()
@@ -180,6 +193,7 @@ const run = async () => {
   }
   //processConfig = JSON.parse(config)
   console.log('\n\n process config loaded: ' + JSON.stringify(processConfig))
+  const extractOnly = processConfig.extractOnly
   //const mock = processConfig.mock
   console.log('\n\n Run a mock load: ' + processConfig.mock)
   await startDatabase().then(async () => {
@@ -187,15 +201,16 @@ const run = async () => {
   })
 
   const db = sql
-  const pipeline = 'select count(*) from accounts'
-  //const totalCount = await countQuery(db, pipeline)
-  //console.log(`Total found before: ${totalCount && totalCount[0] && totalCount[0].total}`)
 
   let skip = 0
-  const limit = 20
+  let limit = 20
+  if ( processConfig.maxRecords && processConfig.maxRecords > 0 ) {
+    limit = processConfig.maxRecords
+  }
   let shouldContinueRunning = true
   let batch = []
   let status
+  let countPipeline
 
   //let output = await getMock(processConfig.mockRecords)
   //console.log('\n\n mocked data: '+output)
@@ -237,9 +252,17 @@ const run = async () => {
             "\n\t SalesforceObject: " + loadRec.SalesforceObject,
             "\n\t operation: " + loadRec.operation,
             "\n\t extractSQL: " + loadRec.extractSQL,
-            "\n\t extractWhereClause: " + loadRec.extractWhereClause
+            "\n\t extractWhereClause: " + loadRec.extractWhereClause+
+            "\n\t extractOrderByClause: " + loadRec.extractOrderByClause+
+            '\n\n\t\ extractOnly: '+extractOnly
           )
-
+          countPipeline = 'select count(*) from '+loadRec.sourceSchema+'.'+loadRec.sourceTable
+          const totalCount = await countQuery(db, countPipeline)
+          console.log('Total found before: '+totalCount)
+          if ( !processConfig.maxRecords || processConfig.maxRecords <= 0 ) {
+            limit = totalCount
+          }
+        
           // create a bulk insert job
           jobRequest = {
             'object': loadRec.SalesforceObject,
@@ -254,15 +277,22 @@ const run = async () => {
             if (processConfig.mock) {
               batch = await getMock(processConfig.mockRecords)
             } else {
-              batch = await getBatch(db, pipeline, skip, limit)
+              pipeline =  'select '+convertToFields(loadRec.extractSQL)+
+                          ' from '+loadRec.sourceSchema+'.'+loadRec.sourceTable+
+                          ' '+loadRec.extractWhereClause+
+                          ' '+loadRec.extractOrderByClause+
+                          ' '+createPagination(loadRec.pagination,skip,limit)+';'
+              batch = await getBatch(db, pipeline)
             }
+
+            console.log('\n\t\t ....processing records from '+skip+' to '+limit+' of total records: '+totalCount)
             // Optional - depending on if your query reduces in size as you query or if it's a fixed number of results that you need to page through
             skip = skip + limit
             shouldContinueRunning = batch.length > 0 && !processConfig.mock
 
 
             // If we've made it here, there are batch items to update, logic to update the batch of records should be done in this function
-            if (response.id) {
+            if (response.id && !extractOnly ) {
               status = await updateBatch(bulkrequest, response, batch)
               console.log('\n\n...Loaded batch: response.id:  ' + response.id + ' status: ' + status)
             }
