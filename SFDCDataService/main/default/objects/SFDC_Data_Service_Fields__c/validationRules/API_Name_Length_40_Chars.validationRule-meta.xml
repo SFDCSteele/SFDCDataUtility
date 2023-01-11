@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>API_Name_Length_40_Chars</fullName>
+    <active>true</active>
+    <errorConditionFormula>LEN(API_Name__c) &gt; 40</errorConditionFormula>
+    <errorMessage>API Name length cannot exceed 40 characters</errorMessage>
+</ValidationRule>

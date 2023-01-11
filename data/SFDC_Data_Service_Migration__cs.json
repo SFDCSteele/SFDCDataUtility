@@ -1,0 +1,15 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "SFDC_Data_Service_Migration__c",
+                "referenceId": "SFDC_Data_Service_Migration__cRef1"
+            },
+            "Name": "SFM-0001",
+            "Client_Name__c": "ArcBest",
+            "Migration_Description__c": "Oracle Sales Cloud migration to Salesforce Sales Cloud",
+            "Prefix_Identifier__c": "SFArcB",
+            "Migration_Title__c": "Oracle Sales Cloud (PACE+)"
+        }
+    ]
+}

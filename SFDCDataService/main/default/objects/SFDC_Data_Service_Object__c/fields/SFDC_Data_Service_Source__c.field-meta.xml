@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SFDC_Data_Service_Source__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>SFDC Data Service Source</label>
+    <referenceTo>SFDC_Data_Service_Source__c</referenceTo>
+    <relationshipLabel>SFDC Data Service Objects</relationshipLabel>
+    <relationshipName>SFDC_Data_Service_Objects</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

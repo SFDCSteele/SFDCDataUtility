@@ -1,0 +1,6 @@
+<apex:page standardController="SFDC_Data_Service_Fields__c" extensions="SFDC_Meta_Data_Service"
+           recordSetVar="CreateRecords" action="{!processRecords}">
+    <!-- apex:form >
+        <apex:commandButton value="Create Fields" action="{!doSomething}"/>
+    </apex:form -->
+</apex:page>

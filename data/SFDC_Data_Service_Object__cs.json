@@ -1,0 +1,109 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "SFDC_Data_Service_Object__c",
+                "referenceId": "SFDC_Data_Service_Object__cRef1"
+            },
+            "Name": "SFO-0002",
+            "SFO_Status__c": "New",
+            "API_Name__c": "Account__c",
+            "Singular_Label__c": "Account",
+            "Plural_Label__c": "Accounts",
+            "Source_Database__c": "Salesforce",
+            "Source_Schema__c": "osc",
+            "Migration_Title__c": "Oracle Sales Cloud (PACE+)",
+            "Prefix_Identifier__c": "SFArcB"
+        },
+        {
+            "attributes": {
+                "type": "SFDC_Data_Service_Object__c",
+                "referenceId": "SFDC_Data_Service_Object__cRef2"
+            },
+            "Name": "SFO-0004",
+            "SFO_Status__c": "New",
+            "API_Name__c": "Opportunity__c",
+            "Singular_Label__c": "Opportunity",
+            "Plural_Label__c": "Opportunities",
+            "Source_Database__c": "Salesforce",
+            "Source_Schema__c": "osc",
+            "Migration_Title__c": "Oracle Sales Cloud (PACE+)",
+            "Prefix_Identifier__c": "SFArcB"
+        },
+        {
+            "attributes": {
+                "type": "SFDC_Data_Service_Object__c",
+                "referenceId": "SFDC_Data_Service_Object__cRef3"
+            },
+            "Name": "SFO-0006",
+            "SFO_Status__c": "New",
+            "API_Name__c": "Account_Team__c",
+            "Singular_Label__c": "Account Team",
+            "Plural_Label__c": "Account Teams",
+            "Source_Database__c": "Salesforce",
+            "Source_Schema__c": "osc",
+            "Migration_Title__c": "Oracle Sales Cloud (PACE+)",
+            "Prefix_Identifier__c": "SFArcB"
+        },
+        {
+            "attributes": {
+                "type": "SFDC_Data_Service_Object__c",
+                "referenceId": "SFDC_Data_Service_Object__cRef4"
+            },
+            "Name": "SFO-0007",
+            "SFO_Status__c": "New",
+            "API_Name__c": "Opportunity_Team__c",
+            "Singular_Label__c": "Opportunity Team",
+            "Plural_Label__c": "Opportunity Teams",
+            "Source_Database__c": "Salesforce",
+            "Source_Schema__c": "osc",
+            "Migration_Title__c": "Oracle Sales Cloud (PACE+)",
+            "Prefix_Identifier__c": "SFArcB"
+        },
+        {
+            "attributes": {
+                "type": "SFDC_Data_Service_Object__c",
+                "referenceId": "SFDC_Data_Service_Object__cRef5"
+            },
+            "Name": "SFO-0001",
+            "SFO_Status__c": "New",
+            "API_Name__c": "User__c",
+            "Singular_Label__c": "User",
+            "Plural_Label__c": "Users",
+            "Source_Database__c": "Salesforce",
+            "Source_Schema__c": "osc",
+            "Migration_Title__c": "Oracle Sales Cloud (PACE+)",
+            "Prefix_Identifier__c": "SFArcB"
+        },
+        {
+            "attributes": {
+                "type": "SFDC_Data_Service_Object__c",
+                "referenceId": "SFDC_Data_Service_Object__cRef6"
+            },
+            "Name": "SFO-0003",
+            "SFO_Status__c": "New",
+            "API_Name__c": "Contact__c",
+            "Singular_Label__c": "Contact",
+            "Plural_Label__c": "Contacts",
+            "Source_Database__c": "Salesforce",
+            "Source_Schema__c": "osc",
+            "Migration_Title__c": "Oracle Sales Cloud (PACE+)",
+            "Prefix_Identifier__c": "SFArcB"
+        },
+        {
+            "attributes": {
+                "type": "SFDC_Data_Service_Object__c",
+                "referenceId": "SFDC_Data_Service_Object__cRef7"
+            },
+            "Name": "SFO-0005",
+            "SFO_Status__c": "New",
+            "API_Name__c": "Activity__c",
+            "Singular_Label__c": "Activity",
+            "Plural_Label__c": "Activities",
+            "Source_Database__c": "Salesforce",
+            "Source_Schema__c": "osc",
+            "Migration_Title__c": "Oracle Sales Cloud (PACE+)",
+            "Prefix_Identifier__c": "SFArcB"
+        }
+    ]
+}

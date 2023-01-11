@@ -1,73 +1,18 @@
-# SFDCDataUtility
-Utility to read from multiple sources and load data to a SF Org using Bulk API 2.0
+# Salesforce DX Project: Next Steps
 
-# BulkAPI Section
-- source: https://github.com/endolabs/salesforce-bulkv2-java
+Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
 
-## Build
-$ ./gradlew build
+## How Do You Plan to Deploy Your Changes?
 
-# Node Section
-- https://www.tutorialsteacher.com/nodejs/access-sql-server-in-nodejs
+Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
 
+## Configure Your Salesforce DX Project
 
-var express = require('express');
-var app = express();
+The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
 
-app.get('/', function (req, res) {
-   
-    var sql = require("mssql");
+## Read All About It
 
-    // config for your database
-    var config = {
-        user: 'sa',
-        password: 'mypassword',
-        server: 'localhost', 
-        database: 'SchoolDB' 
-    };
-
-    // connect to your database
-    sql.connect(config, function (err) {
-    
-        if (err) console.log(err);
-
-        // create Request object
-        var request = new sql.Request();
-           
-        // query to the database and get the records
-        request.query('select * from Student', function (err, recordset) {
-            
-            if (err) console.log(err)
-
-            // send records as a response
-            res.send(recordset);
-            
-        });
-    });
-});
-
-var server = app.listen(5000, function () {
-    console.log('Server is running..');
-});
-
-
-- https://learn.microsoft.com/en-us/sql/connect/node-js/node-js-driver-for-sql-server?view=sql-server-ver16
-- https://learn.microsoft.com/en-us/sql/connect/node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js?view=sql-server-ver16
-
-- https://github.com/tediousjs/tedious/tree/master/examples
-- https://www.youtube.com/watch?v=W3VZt8OkDX0
-
-
-# Connecting to Salesforce with Node
-
-- https://github.com/msrivastav13/node-sf-bulk2
-- https://salesforce.stackexchange.com/questions/329155/create-a-bulk-job-using-jsforce
-- https://github.com/msrivastav13/sfmetadataDependency
-- https://npm.io/package/node-sf-bulk2
-
-# Java section
-
-## Connecting to MSSQL database
-- https://www.codejava.net/java-se/jdbc/connect-to-microsoft-sql-server-via-jdbc
-- https://learn.microsoft.com/en-us/sql/connect/jdbc/step-3-proof-of-concept-connecting-to-sql-using-java?view=sql-server-ver16
-- https://hevodata.com/learn/java-connect-to-microsoft-sql-server/
+- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
+- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
+- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
+- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)

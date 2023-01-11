@@ -1,0 +1,10 @@
+[
+    {
+        "sobject": "SFDC_Data_Service_Migration__c",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": [
+            "SFDC_Data_Service_Migration__cs.json"
+        ]
+    }
+]

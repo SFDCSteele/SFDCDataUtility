@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SFDC_Data_Service_Object__c</fullName>
+    <externalId>false</externalId>
+    <label>SFDC Data Service Object</label>
+    <referenceTo>SFDC_Data_Service_Object__c</referenceTo>
+    <relationshipLabel>SFDC Data Service Fields</relationshipLabel>
+    <relationshipName>SFDC_Data_Service_Fields</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

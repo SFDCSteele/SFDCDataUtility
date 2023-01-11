@@ -1,0 +1,15 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "SFDC_Data_Service_Source__c",
+                "referenceId": "SFDC_Data_Service_Source__cRef1"
+            },
+            "Name": "SFS-0001",
+            "Source_Schema__c": "osc",
+            "Source_Database__c": "Salesforce",
+            "Migration_Title__c": "Oracle Sales Cloud (PACE+)",
+            "Prefix_Identifier__c": "SFArcB"
+        }
+    ]
+}
